@@ -13,7 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
-
+//С‚СѓС‚ Р±С‹Р» yvonfromykon
 
 
 public class Byte extends  JFrame implements KeyListener{
@@ -99,7 +99,7 @@ public class Byte extends  JFrame implements KeyListener{
 	}
 	
 	public void rotationCheckT()throws Exception{
-		if(game.figureNumber == 1){   // для фигурки номер 1
+		if(game.figureNumber == 1){   // Г¤Г«Гї ГґГЁГЈГіГ°ГЄГЁ Г­Г®Г¬ГҐГ° 1
 			if(game.figurePosition == 1){
 		int canWeChair1 = 0;
 		int finder = 0; 
@@ -126,7 +126,7 @@ public class Byte extends  JFrame implements KeyListener{
 		if(canWeChair2 > 1){throw new MyException();}
 	}
 	}
-		//++++++++++++++++++++++++++++++++++++++++++ для фигурки номер 3
+		//++++++++++++++++++++++++++++++++++++++++++ Г¤Г«Гї ГґГЁГЈГіГ°ГЄГЁ Г­Г®Г¬ГҐГ° 3
 		if(game.figureNumber == 3){
 		if(game.figurePosition == 3){
 	int canWeR = 0;
@@ -150,7 +150,7 @@ public class Byte extends  JFrame implements KeyListener{
 	if(canWeL > 0){throw new MyException();}
 }
 }
-		//++++++++++++++++++++++++++++++++++++++++++++++++++++++ для 4
+		//++++++++++++++++++++++++++++++++++++++++++++++++++++++ Г¤Г«Гї 4
 		if(game.figureNumber == 4){
 		if(game.figurePosition == 1){
 	int canWeR = 0;
@@ -174,7 +174,7 @@ public class Byte extends  JFrame implements KeyListener{
 	if(canWeL > 0){throw new MyException();}
 }
 }
-	//++++++++++++++++++++++++++++++++++++++++++++++++++++ для фигурки 5
+	//++++++++++++++++++++++++++++++++++++++++++++++++++++ Г¤Г«Гї ГґГЁГЈГіГ°ГЄГЁ 5
 		if(game.figureNumber == 5){
 		if(game.figurePosition == 2){
 	int canWeD = 0;
@@ -221,7 +221,7 @@ public class Byte extends  JFrame implements KeyListener{
 }
 		//++++++++++++++++++++++++++++++++++ 
 		//+++++++++++++++++++++++++++++++++++++++++++ Nomer 6
-		if(game.figureNumber == 6){   // для фигурки номер 6
+		if(game.figureNumber == 6){   // Г¤Г«Гї ГґГЁГЈГіГ°ГЄГЁ Г­Г®Г¬ГҐГ° 6
 			if(game.figurePosition == 1){
 		int canWeChair1 = 0;
 		int finder = 0;
@@ -248,7 +248,7 @@ public class Byte extends  JFrame implements KeyListener{
 		if(canWeChair2 > 1){throw new MyException();}
 	}
 	}
-	//++++++++++++++++++++++++++++++++++++++++++++++++	Занесение координат
+	//++++++++++++++++++++++++++++++++++++++++++++++++	Г‡Г Г­ГҐГ±ГҐГ­ГЁГҐ ГЄГ®Г®Г°Г¤ГЁГ­Г ГІ
 		iCoor = new ArrayList<Integer>();
 		 jCoor = new ArrayList<Integer>();
 			for (int i = 0; i<game.V; i++){
@@ -308,7 +308,7 @@ public class Byte extends  JFrame implements KeyListener{
     public  void placeFigure(String[][] b){
 
     	game.figureNumber = (int)(Math.random()*6 +1);
-    	Figure chair = new Figure(game.figureNumber);                         // фигурку менять тут
+    	Figure chair = new Figure(game.figureNumber);                         // ГґГЁГЈГіГ°ГЄГі Г¬ГҐГ­ГїГІГј ГІГіГІ
         for(int i = 0; i < 3; i++){
         	for(int j = 0; j < 3; j++){
         		b[i][j+2] = chair.a[i][j];
@@ -337,7 +337,7 @@ public class Byte extends  JFrame implements KeyListener{
         			if(game.figurePosition == 3){b[iCoor.get(0) + i ][jCoor.get(0) + j ] = chair2.a[i][j];
             		}else if(game.figurePosition == 2){b[iCoor.get(0) + i ][jCoor.get(0) + j -1] = chair2.a[i][j];
             		}else  if(game.figurePosition == 4){b[iCoor.get(0) + i][jCoor.get(0) + j - 1] = chair2.a[i][j];
-        			}else b[iCoor.get(0) + i - 1][jCoor.get(0) + j ] = chair2.a[i][j];} // для 1
+        			}else b[iCoor.get(0) + i - 1][jCoor.get(0) + j ] = chair2.a[i][j];} // Г¤Г«Гї 1
         		//+++++++++++++++++++++++++
         		if(game.figureNumber == 5){
             		if(game.figurePosition == 1){b[iCoor.get(0) + i - 1][jCoor.get(0) + j ] = chair2.a[i][j];
@@ -490,7 +490,7 @@ public class Byte extends  JFrame implements KeyListener{
 		
 	
 		
-	   game.convertToTwo(game.b); // 1 фокус покус в 2
+	   game.convertToTwo(game.b); // 1 ГґГ®ГЄГіГ± ГЇГ®ГЄГіГ± Гў 2
 		game.displayArray(game.b);
 		 game.placeFigure(game.b);
 		game.displayArray(game.b);
@@ -547,7 +547,7 @@ public class Byte extends  JFrame implements KeyListener{
 	    Thread t1 = new Thread(new Task1());
 		t1.start();
 		t1.join();
-		game.doubleCheck(); // а не вынести ли в поток?
+		game.doubleCheck(); // Г  Г­ГҐ ГўГ»Г­ГҐГ±ГІГЁ Г«ГЁ Гў ГЇГ®ГІГ®ГЄ?
 		
 		}
 		System.out.println("              " + game.PlayerScore);
